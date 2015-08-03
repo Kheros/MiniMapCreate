@@ -1,13 +1,18 @@
 # MiniMapCreate
-## Hello
 
-As the title describes the tool i have created allows you to create minimap images for ADT tiles. So far this is just terrain with lighting, wmo and water are to come.
 
-The tool ships with a DLL and a .lib (with header files) so you can use it in your tools as well. Usage is pretty simple ill show that in the end.
+Como el título describe, esta herramienta permite crear imagenes para el minimap de los ADT en .blp. Incluye terreno e iluminación. Los WMO y el agua se añadirán más adelante
 
-So how does it work? You open the GUI, select the path of your 3.3.5a data (!) folder and you are ready to go. You can load a continent (e.g. Kalimdor) and select the tiles youd like. Then you click build and the files are created in the path you've selected as output path.
+La herramienta se entrega con una DLL y un .lib (con header) para que lo puedas usar con tus herramientas también. 
 
-## To use the DLL:
+## Instrucciones
+1. Abre el ejecutable
+2. Selecciona la ruta de tu carpeta data de la versión 3.3.5a 
+3. Carga un continente (e.g. Kalimdor) y selecciona los parámetros que necesites. 
+4. Haz clic en build
+5. Los archivos se generarán en la carpeta que hallas establecido como “output path”.
+
+## Como usar la DLL
 1. Make sure you have all the header files and the .lib in your code directory
 2. #include "MinimapCreate.h"
 3. Add MinimapCreate.lib to your linker dependencies
@@ -17,9 +22,10 @@ So how does it work? You open the GUI, select the path of your 3.3.5a data (!) f
 6.1 You can implement IFileHandler yourself if you have already implemented some sort of file handling OR you can use minimapCreateNewMpqHandler which will instantiate a handler that loads all MPQs in a given path and then returns files from there
 7. Use IMinimapCreate::fromHandler to get a HBITMAP with the image
 
-## [Important]
-First try the exe in the debug folder. If it does not work (dll errors) try the one in the release folder.
+## Importante
+Primero usa el .exe de la carpeta Debug. Si no funciona (Bugs de DLL), usa el de la carpeta de Release.
 
 ## Greetings
 ## Cromon
+
 
